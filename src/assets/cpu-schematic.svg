@@ -1,0 +1,50 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1100" rx="38" fill="#050505"/>
+  <rect x="54" y="52" width="1492" height="996" rx="34" fill="#111113" stroke="#2997FF" stroke-width="4"/>
+  <text x="96" y="130" fill="#F5F5F7" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="850">Hack Computer Instruction Set</text>
+  <text x="96" y="176" fill="#A1A1A6" font-family="Inter, Arial, sans-serif" font-size="24">A-instructions, C-instructions, ALU control bits, destination bits, jump bits, and assembler output.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="96" y="226" width="1408" height="112" rx="18" fill="#080D18" stroke="#38DFF8" stroke-width="2"/>
+    <text x="126" y="270" fill="#38DFF8" font-size="26" font-weight="850">A-instruction format</text>
+    <text x="126" y="313" fill="#F5F5F7" font-size="29" font-weight="700">0 v v v v v v v v v v v v v v v</text>
+    <text x="740" y="312" fill="#A1A1A6" font-size="22">Stores a 15-bit constant or symbol address in the A register.</text>
+
+    <rect x="96" y="374" width="1408" height="128" rx="18" fill="#080D18" stroke="#4ADE80" stroke-width="2"/>
+    <text x="126" y="420" fill="#4ADE80" font-size="26" font-weight="850">C-instruction format</text>
+    <text x="126" y="464" fill="#F5F5F7" font-size="29" font-weight="700">111 a c1 c2 c3 c4 c5 c6 d1 d2 d3 j1 j2 j3</text>
+    <text x="126" y="494" fill="#A1A1A6" font-size="20">comp controls the ALU, dest chooses A/D/M write targets, jump decides whether PC loads A.</text>
+
+    <rect x="96" y="540" width="428" height="396" rx="18" fill="#17171A" stroke="#FFFFFF" stroke-opacity=".14"/>
+    <text x="126" y="586" fill="#2997FF" font-size="28" font-weight="850">comp bits</text>
+    <text x="126" y="625" fill="#A1A1A6" font-size="18">a c1 c2 c3 c4 c5 c6</text>
+    <text x="126" y="668" fill="#F5F5F7" font-size="20">0101010  →  0</text>
+    <text x="126" y="700" fill="#F5F5F7" font-size="20">0111111  →  1</text>
+    <text x="126" y="732" fill="#F5F5F7" font-size="20">0001100  →  D</text>
+    <text x="126" y="764" fill="#F5F5F7" font-size="20">0110000  →  A</text>
+    <text x="126" y="796" fill="#F5F5F7" font-size="20">1110000  →  M</text>
+    <text x="126" y="828" fill="#F5F5F7" font-size="20">0000010  →  D+A</text>
+    <text x="126" y="860" fill="#F5F5F7" font-size="20">1000010  →  D+M</text>
+    <text x="126" y="892" fill="#F5F5F7" font-size="20">0010101  →  D|A</text>
+
+    <rect x="556" y="540" width="428" height="396" rx="18" fill="#17171A" stroke="#FFFFFF" stroke-opacity=".14"/>
+    <text x="586" y="586" fill="#4ADE80" font-size="28" font-weight="850">dest and jump</text>
+    <text x="586" y="634" fill="#F6B94C" font-size="22" font-weight="800">dest</text>
+    <text x="586" y="670" fill="#F5F5F7" font-size="20">000 null   001 M   010 D   011 MD</text>
+    <text x="586" y="702" fill="#F5F5F7" font-size="20">100 A      101 AM  110 AD  111 AMD</text>
+    <text x="586" y="760" fill="#8B5CF6" font-size="22" font-weight="800">jump</text>
+    <text x="586" y="796" fill="#F5F5F7" font-size="20">000 null   001 JGT   010 JEQ   011 JGE</text>
+    <text x="586" y="828" fill="#F5F5F7" font-size="20">100 JLT    101 JNE   110 JLE   111 JMP</text>
+    <text x="586" y="890" fill="#A1A1A6" font-size="18">Jump bits are gated with ALU zero/negative flags to control PC load.</text>
+
+    <rect x="1016" y="540" width="488" height="396" rx="18" fill="#17171A" stroke="#FFFFFF" stroke-opacity=".14"/>
+    <text x="1046" y="586" fill="#F5F5F7" font-size="28" font-weight="850">Assembler pipeline</text>
+    <text x="1046" y="635" fill="#A1A1A6" font-size="20">1. Strip comments and labels</text>
+    <text x="1046" y="673" fill="#A1A1A6" font-size="20">2. Resolve symbols and variables</text>
+    <text x="1046" y="711" fill="#A1A1A6" font-size="20">3. Translate comp/dest/jump mnemonics</text>
+    <text x="1046" y="749" fill="#A1A1A6" font-size="20">4. Emit 16-bit machine instructions</text>
+    <rect x="1046" y="790" width="398" height="86" rx="14" fill="#050505"/>
+    <text x="1070" y="825" fill="#4ADE80" font-size="20" font-family="Consolas, monospace">@sum  →  0000000000010000</text>
+    <text x="1070" y="856" fill="#38DFF8" font-size="20" font-family="Consolas, monospace">D=M   →  1111110000010000</text>
+  </g>
+</svg>
