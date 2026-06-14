@@ -315,22 +315,6 @@ const skills = [
       </div>
     </section>
 
-    <section class="image-story" aria-label="Custom computer project evidence">
-      <figure class="wide-photo">
-        <img :src="logicAnalyzer" alt="Logic analyzer showing digital timing signals" />
-        <figcaption>Signal verification on real hardware.</figcaption>
-      </figure>
-      <div class="stacked-photos">
-        <figure>
-          <img :src="isaNotes" alt="Notebook page with custom instruction set notes" />
-          <figcaption>Instruction set notes.</figcaption>
-        </figure>
-        <figure>
-          <img :src="hardwareBoard" alt="Wired hardware setup with boards and cables" />
-          <figcaption>Hardware bench.</figcaption>
-        </figure>
-      </div>
-    </section>
 
     <section id="projects" class="projects">
       <div class="section-title">
