@@ -86,7 +86,7 @@ const projects = [
     title: 'SmartPipe',
     category: 'Product concept',
     body: 'Early-stage hardware and mobile app project for helping users reduce vaping with sensing, tracking, reminders, notes, analytics, and coaching features.',
-    repoUrl: 'Private repo',
+    repoUrl: null,
     details: ['ADC puff sensing, adaptive baseline calibration, Flutter app concepts, BLE connectivity, analytics, haptics, notes, reminders, and AI coaching.'],
     code: [{ label: 'SmartPipe.py', text: 'START_DELTA = max(MIN_START_DELTA, noise * 6)\nSTOP_DELTA = max(MIN_STOP_DELTA, noise * 3)\nif puffs >= MAX_PUFFS:\n    locked = True' }],
     images: [
@@ -100,7 +100,7 @@ const projects = [
     ],
     files: [{ label: 'SmartPipe.py', href: `${fileBase}SmartPipe.py`, download: 'SmartPipe.py' }],
   },
-  { title: 'AI Servo Light Switch', category: 'Automation', body: 'Built a servo-based light switch system that can physically turn a standard wall switch on and off using Raspberry Pi control.', repoUrl: null, details: ['Servo motor, controller board, mechanical linkage, actuation logic, alignment, reliability, and safety.'] },
+  { title: 'AI Servo Light Switch', category: 'Automation', body: 'Built a servo-based light switch system that can physically turn a standard wall switch on and off using Raspberry Pi control.', repoUrl: 'https://github.com/ZainKhansn/AutomaticRoomLight', details: ['Servo motor, controller board, mechanical linkage, actuation logic, alignment, reliability, and safety.'] },
   { title: 'Latin Wordle', category: 'Educational game', body: 'Made a Wordle-style game for practicing Latin vocabulary with guesses, feedback, validation, and scoring.', repoUrl: null, details: ['Daily-style word challenges, letter-position feedback, Latin vocabulary, word database, guess validation, and scoring.'] },
   { title: 'Epic Latin Game', category: 'Python/Pygame', body: 'Built a Python/Pygame Latin practice game with vocabulary challenges, feedback, and a simple game loop.', repoUrl: 'https://github.com/ZainKhan06/EpicLatinGame', details: ['Python, Pygame, vocabulary practice, graphical UI, event-driven programming, and game loop architecture.'], code: [{ label: 'main.py', text: 'def check_word(word, found_words):\n    if len(word) <= 3 or letters[6] not in word:\n        return False' }], files: [{ label: 'main.py', href: `${fileBase}latin-main.py` }] },
   { title: 'Programmatics Website', category: 'Nonprofit web development', body: 'Designed and maintained the Programmatics website to show the nonprofit’s programs, mission, outreach, and student impact.', repoUrl: nonprofitRepoUrl, details: ['Web pages for a student-led nonprofit, electronics, Raspberry Pi, coding, outreach, accessibility, and education.'] },
@@ -166,8 +166,6 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
           <div class="project-topline">
             <span>{{ project.category }}</span>
             <a v-if="project.repoUrl && project.repoUrl.startsWith('https')" :href="project.repoUrl" target="_blank" rel="noreferrer">Repo</a>
-            <em v-else-if="project.repoUrl">{{ project.repoUrl }}</em>
-            <em v-else>Local build</em>
           </div>
           <h3>{{ project.title }}</h3>
           <p>{{ project.body }}</p>
