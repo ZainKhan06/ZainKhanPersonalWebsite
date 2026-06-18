@@ -40,7 +40,6 @@ const projects = [
     localLabel: 'Local build',
     details: ['Logic gates, ALU, CPU, registers, RAM, ROM, control unit, memory mapping, assembler, compiler, graphics output, and Tetris.', 'Jack compiler with tokenization, recursive descent parsing, symbol tables, VM writing, and folder or single-file compilation.'],
     images: [
-      { src: instructionSetSvg, alt: 'Nand2Tetris custom 16-bit computer instruction set reference', label: 'Instruction set reference' },
       { src: hardwareBoard, alt: 'Custom computer hardware wiring and board setup', label: 'Hardware build' },
       { src: isaNotes, alt: 'Handwritten instruction set and computer architecture notes', label: 'Architecture notes' },
       { src: logicAnalyzer, alt: 'Logic analyzer showing timing signals', label: 'Signal verification' },
