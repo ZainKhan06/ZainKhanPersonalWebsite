@@ -15,14 +15,17 @@ import smartpipeAppSettings from './assets/smartpipe-app-settings.jpg';
 import smartpipeAppTracking from './assets/smartpipe-app-tracking.jpg';
 import programmatic1 from './assets/IMG_9554.PNG';
 import programmatic2 from './assets/IMG_9555.PNG';
-import programmatic3 from './assets/IMG_9556.PNG';
+import programmatic3 from './assets/IMG_956.PNG';
 import programmatic4 from './assets/IMG_9557.PNG';
 import programmatic5 from './assets/IMG_9558.PNG';
 import programmatic6 from './assets/IMG_9559.PNG';
 import programmatic7 from './assets/IMG_9560.PNG';
 
 const linkedinUrl = 'https://www.linkedin.com/in/zain-khan-88a352259/';
+const currentGithubUrl = 'https://github.com/ZainKhan06';
+const oldGithubUrl = 'https://github.com/ZainKhansn';
 const nonprofitRepoUrl = 'https://github.com/ZShirwani/Final';
+const cellMembraneRepoUrl = 'https://github.com/ZainKhansn/cellmembranewebsite';
 const fileBase = import.meta.env.BASE_URL + 'project-files/';
 
 const programmaticPhotos = [
@@ -113,7 +116,7 @@ const projects = [
     files: [{ label: 'main.py', href: `${fileBase}latin-main.py` }],
   },
   { title: 'Programmatics Website', category: 'Nonprofit web development', body: 'Designed and maintained the Programmatics website to show the nonprofit’s programs, mission, outreach, and student impact.', repoUrl: nonprofitRepoUrl, details: ['Built web pages for a real student-led nonprofit', 'Highlighted electronics, Raspberry Pi, coding, and community programs', 'Supported outreach and accessibility for students and families', 'Connected technical work with nonprofit leadership and education'] },
-  { title: 'Lipid Bilayer Website', category: 'Science education', body: 'Built a biology website explaining lipid bilayers and cell membrane concepts with clear visuals for students.', repoUrl: null, details: ['Phospholipids and membrane structure', 'Membrane transport, diffusion, and cell structure', 'Interactive visuals and student-friendly explanations', 'Scientific communication and educational design'] },
+  { title: 'Lipid Bilayer Website', category: 'Science education', body: 'Built a biology website explaining lipid bilayers and cell membrane concepts with clear visuals for students.', repoUrl: cellMembraneRepoUrl, details: ['Phospholipids and membrane structure', 'Membrane transport, diffusion, and cell structure', 'Interactive visuals and student-friendly explanations', 'Scientific communication and educational design'] },
 ];
 
 const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedded Systems', 'Robotics', 'Motor Control', 'SwiftUI', 'Flutter', 'BLE', 'Networking', 'Compiler Design', 'Programming Language Design', 'Data Analytics', 'Mechatronics', 'Assistive Technology', 'Accessibility', 'Hackathons', 'Python', 'Pygame', 'STEM Education', 'Leadership', 'Public Speaking', 'Curriculum Design', 'Project Management'];
@@ -126,6 +129,7 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
       <div>
         <a href="#work">Work</a>
         <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
         <a href="#impact">Impact</a>
         <a :href="linkedinUrl" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
@@ -157,6 +161,25 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
           <p><b>Full-stack</b><span>hardware to app</span></p>
         </div>
       </aside>
+    </section>
+
+    <section id="github" class="github-section">
+      <div>
+        <p class="kicker">GitHub accounts</p>
+        <h2>Code lives across two accounts.</h2>
+      </div>
+      <div class="github-cards">
+        <a :href="currentGithubUrl" target="_blank" rel="noreferrer">
+          <span>Current account</span>
+          <strong>ZainKhan06</strong>
+          <small>Current main GitHub account.</small>
+        </a>
+        <a :href="oldGithubUrl" target="_blank" rel="noreferrer">
+          <span>Old main account</span>
+          <strong>ZainKhansn</strong>
+          <small>Old main account lost after my high school email was terminated.</small>
+        </a>
+      </div>
     </section>
 
     <section id="work" class="featured">
@@ -258,8 +281,10 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
     </section>
 
     <footer class="footer">
-      <p>Connect with me on LinkedIn.</p>
-      <a :href="linkedinUrl" target="_blank" rel="noreferrer">linkedin.com/in/zain-khan-88a352259</a>
+      <p>GitHub:</p>
+      <a :href="currentGithubUrl" target="_blank" rel="noreferrer">ZainKhan06</a>
+      <a :href="oldGithubUrl" target="_blank" rel="noreferrer">ZainKhansn old main account</a>
+      <a :href="linkedinUrl" target="_blank" rel="noreferrer">LinkedIn</a>
     </footer>
   </main>
 </template>
