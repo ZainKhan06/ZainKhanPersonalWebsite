@@ -25,6 +25,7 @@ const linkedinUrl = 'https://www.linkedin.com/in/zain-khan-88a352259/';
 const currentGithubUrl = 'https://github.com/ZainKhan06';
 const oldGithubUrl = 'https://github.com/ZainKhansn';
 const programmaticsWebsiteUrl = 'https://zshirwani.github.io/Final/#/';
+const programmaticsRepoUrl = 'https://github.com/ZShirwani/Final';
 const cellMembraneRepoUrl = 'https://github.com/ZainKhansn/cellmembranewebsite';
 const yaleHackathonDocUrl = 'https://docs.google.com/document/d/1sAFE_aKJN7kFp5tdVL9ducJNbAUSNVVVhNz2FbmUKRE/edit?usp=sharing';
 const fileBase = import.meta.env.BASE_URL + 'project-files/';
@@ -185,7 +186,7 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
           <li>Guided students through wiring, debugging, and integrating physical electronics with software.</li>
           <li>Built outreach material and maintained the nonprofit website.</li>
         </ul>
-        <a class="text-link" :href="programmaticsWebsiteUrl" target="_blank" rel="noreferrer">View Programmatics website</a>
+        <a class="text-link" :href="programmaticsRepoUrl" target="_blank" rel="noreferrer">View Programmatics repo</a>
       </div>
       <div class="photo-wall"><figure v-for="photo in programmaticPhotos" :key="photo"><img :src="photo" alt="Programmatics class photo" /></figure></div>
     </section>
