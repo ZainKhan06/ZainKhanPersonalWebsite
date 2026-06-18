@@ -117,7 +117,6 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
       <div>
         <a href="#work">Work</a>
         <a href="#projects">Projects</a>
-        <a href="#github">GitHub</a>
         <a href="#impact">Impact</a>
         <a :href="linkedinUrl" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
@@ -130,6 +129,8 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
         <p>I work on practical engineering projects: custom computers, robotics, mobile apps, compilers, and hands-on STEM education for younger students.</p>
         <div class="hero-actions">
           <a href="#projects">View projects</a>
+          <a :href="currentGithubUrl" target="_blank" rel="noreferrer">GitHub: ZainKhan06</a>
+          <a :href="oldGithubUrl" target="_blank" rel="noreferrer">Old GitHub: ZainKhansn</a>
           <a :href="linkedinUrl" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
@@ -142,17 +143,6 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
           <p><b>Full-stack</b><span>hardware to app</span></p>
         </div>
       </aside>
-    </section>
-
-    <section id="github" class="github-section">
-      <div>
-        <p class="kicker">GitHub accounts</p>
-        <h2>Code lives across two accounts.</h2>
-      </div>
-      <div class="github-cards">
-        <a :href="currentGithubUrl" target="_blank" rel="noreferrer"><span>Current account</span><strong>ZainKhan06</strong><small>Current main GitHub account.</small></a>
-        <a :href="oldGithubUrl" target="_blank" rel="noreferrer"><span>Old main account</span><strong>ZainKhansn</strong><small>Old main account lost after my high school email was terminated.</small></a>
-      </div>
     </section>
 
     <section id="work" class="featured">
