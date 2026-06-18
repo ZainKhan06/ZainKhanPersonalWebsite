@@ -25,8 +25,6 @@ const linkedinUrl = 'https://www.linkedin.com/in/zain-khan-88a352259/';
 const nonprofitRepoUrl = 'https://github.com/ZShirwani/Final';
 const fileBase = import.meta.env.BASE_URL + 'project-files/';
 
-const processImages = [hardwareBoard, isaNotes, logicAnalyzer];
-
 const programmaticPhotos = [
   { src: programmatic1, alt: 'Programmatics students building Raspberry Pi LED circuits on breadboards' },
   { src: programmatic2, alt: 'Student wiring a Raspberry Pi and breadboard circuit during Programmatics class' },
@@ -46,6 +44,8 @@ const projects = [
     details: ['NAND, NOT, AND, OR, XOR, multiplexers, and demultiplexers', 'ALU arithmetic, bitwise operations, comparisons, and conditional execution support', 'Program counter, instruction register, registers, control unit, memory interface, and jump logic', 'RAM, ROM, memory mapping, instruction storage, and data storage', 'Custom ISA, assembler symbol resolution, compiler code generation, and graphics output'],
     images: [
       { src: instructionSetSvg, alt: 'Nand2Tetris custom 16-bit computer instruction set reference', label: 'Instruction set reference' },
+      { src: hardwareBoard, alt: 'Custom computer hardware wiring and board setup', label: 'Hardware build' },
+      { src: isaNotes, alt: 'Handwritten instruction set and computer architecture notes', label: 'Architecture notes' },
       { src: logicAnalyzer, alt: 'Logic analyzer showing digital timing signals from the custom computer project', label: 'Signal verification' },
     ],
     code: [
@@ -172,18 +172,13 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
       <div class="feature-board">
         <img :src="instructionSetSvg" alt="Hack instruction set diagram" />
       </div>
-      <div class="process-strip">
-        <figure v-for="image in processImages" :key="image">
-          <img :src="image" alt="Project build process photo" />
-        </figure>
-      </div>
     </section>
 
     <section id="projects" class="projects">
       <div class="section-heading">
         <p class="kicker">Selected work</p>
         <h2>Project archive</h2>
-        <p>Each card keeps the original photos, files, repos, code snippets, and details, but the layout is rebuilt to feel cleaner and more handmade.</p>
+        <p>Project photos and build notes are organized inside each project card instead of floating in the middle of the page.</p>
       </div>
 
       <div class="project-grid">
