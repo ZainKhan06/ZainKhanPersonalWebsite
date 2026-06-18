@@ -24,19 +24,20 @@ import programmatic7 from './assets/IMG_9560.PNG';
 const linkedinUrl = 'https://www.linkedin.com/in/zain-khan-88a352259/';
 const currentGithubUrl = 'https://github.com/ZainKhan06';
 const oldGithubUrl = 'https://github.com/ZainKhansn';
-const nonprofitRepoUrl = 'https://github.com/ZShirwani/Final';
+const programmaticsWebsiteUrl = 'https://zshirwani.github.io/Final/#/';
 const cellMembraneRepoUrl = 'https://github.com/ZainKhansn/cellmembranewebsite';
+const yaleHackathonDocUrl = 'https://docs.google.com/document/d/1sAFE_aKJN7kFp5tdVL9ducJNbAUSNVVVhNz2FbmUKRE/edit?usp=sharing';
 const fileBase = import.meta.env.BASE_URL + 'project-files/';
 
 const programmaticPhotos = [programmatic1, programmatic2, programmatic3, programmatic4, programmatic5, programmatic6, programmatic7];
 
 const projects = [
   {
-    title: 'Custom 16-Bit Computer',
-    category: 'Computer architecture',
+    title: 'Custom 16-Bit Computer + Jack Compiler',
+    category: 'Computer architecture / compiler design',
     body: 'Built a 16-bit computer from logic gates up, then wrote the assembler, compiler, and language needed to run programs on it. The final goal was getting Tetris working on a computer I built from the ground up.',
-    repoUrl: 'https://github.com/ZainKhan06/hack-app',
-    details: ['Logic gates, ALU, CPU, registers, RAM, ROM, control unit, memory mapping, assembler, compiler, graphics output, and Tetris.'],
+    localLabel: 'Local build',
+    details: ['Logic gates, ALU, CPU, registers, RAM, ROM, control unit, memory mapping, assembler, compiler, graphics output, and Tetris.', 'Jack compiler with tokenization, recursive descent parsing, symbol tables, VM writing, and folder or single-file compilation.'],
     images: [
       { src: instructionSetSvg, alt: 'Nand2Tetris custom 16-bit computer instruction set reference', label: 'Instruction set reference' },
       { src: hardwareBoard, alt: 'Custom computer hardware wiring and board setup', label: 'Hardware build' },
@@ -46,28 +47,22 @@ const projects = [
     code: [
       { label: 'HackAssembler.py', text: 'comp_table = { "D+A": "0000010", "D-A": "0010011", "D&M": "1000000" }\nnext_variable_address = 16\noutput_lines.append(binary_instruction)' },
       { label: 'CPU.hdl', text: 'ALU(x=Dout, y=AMout, zx=instruction[11], nx=instruction[10],\n    zy=instruction[9], ny=instruction[8], f=instruction[7], no=instruction[6],\n    out=ALUout, zr=ZRout, ng=NGout);' },
+      { label: 'JackCompiler.py', text: 'if os.path.isdir(path):\n    for filename in os.listdir(path):\n        if filename.endswith(".jack"):\n            compile_file(os.path.join(path, filename))' },
     ],
     files: [
       { label: 'HackAssembler.py', href: `${fileBase}HackAssembler.py`, download: 'HackAssembler.py' },
       { label: 'Assembler README', href: `${fileBase}hack-assembler-README.md`, download: 'hack-assembler-README.md' },
       { label: 'CPU.hdl', href: `${fileBase}CPU.hdl`, download: 'CPU.hdl' },
       { label: 'ALU.hdl', href: `${fileBase}ALU.hdl`, download: 'ALU.hdl' },
+      { label: 'jack-compiler.zip', href: `${fileBase}jack-compiler.zip`, download: 'jack-compiler.zip' },
     ],
-  },
-  {
-    title: 'Jack Compiler',
-    category: 'Compiler design',
-    body: 'Built a Python compiler for Jack programs that translates higher-level code into VM code. It handles parsing, variables, control flow, and code generation.',
-    repoUrl: null,
-    details: ['Tokenization, recursive descent parsing, symbol tables, VM writing, and folder or single-file compilation.'],
-    code: [{ label: 'JackCompiler.py', text: 'if os.path.isdir(path):\n    for filename in os.listdir(path):\n        if filename.endswith(".jack"):\n            compile_file(os.path.join(path, filename))' }],
-    files: [{ label: 'jack-compiler.zip', href: `${fileBase}jack-compiler.zip`, download: 'jack-compiler.zip' }],
   },
   {
     title: 'Yale Hackathon — Assistive Arm + Voice Navigation',
     category: 'Hackathon / Assistive Technology',
     body: 'Yale hackathon project combining an assistive robotic arm concept with a voice navigation app for accessibility, sensing, and spoken directions.',
-    repoUrl: 'https://github.com/ZainKhan06/SenseTrack',
+    linkUrl: yaleHackathonDocUrl,
+    linkLabel: 'Project doc',
     details: ['Assistive robotic arm prototype, camera and servo rig, voice-first navigation, sensing, and rapid prototyping.'],
     images: [
       { src: assistiveArmMounted, alt: 'Wearable assistive robotic arm mounted on a prototype board', label: 'Assistive arm prototype' },
@@ -78,7 +73,6 @@ const projects = [
     title: 'Wi-Fi Robot Car',
     category: 'Robotics',
     body: 'Built a Raspberry Pi robot car controlled over Wi-Fi from a custom iPhone app with gyro steering and live camera streaming.',
-    repoUrl: null,
     details: ['Raspberry Pi 5, L298N motor driver, iPhone app, Python TCP server, PWM motor control, GPIO debugging, and camera stream setup.'],
     video: { src: `${import.meta.env.BASE_URL}videos/robot-car-demo.mp4`, caption: 'Robot car demo shown at 2x speed.' },
   },
@@ -86,7 +80,7 @@ const projects = [
     title: 'SmartPipe',
     category: 'Product concept',
     body: 'Early-stage hardware and mobile app project for helping users reduce vaping with sensing, tracking, reminders, notes, analytics, and coaching features.',
-    repoUrl: null,
+    localLabel: 'Private repo',
     details: ['ADC puff sensing, adaptive baseline calibration, Flutter app concepts, BLE connectivity, analytics, haptics, notes, reminders, and AI coaching.'],
     code: [{ label: 'SmartPipe.py', text: 'START_DELTA = max(MIN_START_DELTA, noise * 6)\nSTOP_DELTA = max(MIN_STOP_DELTA, noise * 3)\nif puffs >= MAX_PUFFS:\n    locked = True' }],
     images: [
@@ -100,10 +94,10 @@ const projects = [
     ],
     files: [{ label: 'SmartPipe.py', href: `${fileBase}SmartPipe.py`, download: 'SmartPipe.py' }],
   },
-  { title: 'AI Servo Light Switch', category: 'Automation', body: 'Built a servo-based light switch system that can physically turn a standard wall switch on and off using Raspberry Pi control.', repoUrl: 'https://github.com/ZainKhansn/AutomaticRoomLight', details: ['Servo motor, controller board, mechanical linkage, actuation logic, alignment, reliability, and safety.'] },
-  { title: 'Epic Latin Game', category: 'Python/Pygame', body: 'Built a Python/Pygame Latin practice game with vocabulary challenges, feedback, and a simple game loop.', repoUrl: 'https://github.com/ZainKhan06/EpicLatinGame', details: ['Python, Pygame, vocabulary practice, graphical UI, event-driven programming, and game loop architecture.'], code: [{ label: 'main.py', text: 'def check_word(word, found_words):\n    if len(word) <= 3 or letters[6] not in word:\n        return False' }], files: [{ label: 'main.py', href: `${fileBase}latin-main.py` }] },
-  { title: 'Programmatics Website', category: 'Nonprofit web development', body: 'Designed and maintained the Programmatics website to show the nonprofit’s programs, mission, outreach, and student impact.', repoUrl: nonprofitRepoUrl, details: ['Web pages for a student-led nonprofit, electronics, Raspberry Pi, coding, outreach, accessibility, and education.'] },
-  { title: 'Lipid Bilayer Website', category: 'Science education', body: 'Built a biology website explaining lipid bilayers and cell membrane concepts with clear visuals for students.', repoUrl: cellMembraneRepoUrl, details: ['Cell membrane structure, phospholipids, membrane transport, diffusion, cell structure, and science communication.'] },
+  { title: 'AI Servo Light Switch', category: 'Automation', body: 'Built a servo-based light switch system that can physically turn a standard wall switch on and off using Raspberry Pi control.', linkUrl: 'https://github.com/ZainKhansn/AutomaticRoomLight', linkLabel: 'Repo', details: ['Servo motor, controller board, mechanical linkage, actuation logic, alignment, reliability, and safety.'] },
+  { title: 'Epic Latin Game', category: 'Python/Pygame', body: 'Built a Python/Pygame Latin practice game with vocabulary challenges, feedback, and a simple game loop.', linkUrl: 'https://github.com/ZainKhan06/EpicLatinGame', linkLabel: 'Repo', details: ['Python, Pygame, vocabulary practice, graphical UI, event-driven programming, and game loop architecture.'], code: [{ label: 'main.py', text: 'def check_word(word, found_words):\n    if len(word) <= 3 or letters[6] not in word:\n        return False' }], files: [{ label: 'main.py', href: `${fileBase}latin-main.py` }] },
+  { title: 'Programmatics Website', category: 'Nonprofit web development', body: 'Designed and maintained the Programmatics website to show the nonprofit’s programs, mission, outreach, and student impact.', linkUrl: programmaticsWebsiteUrl, linkLabel: 'Website', details: ['Web pages for a student-led nonprofit, electronics, Raspberry Pi, coding, outreach, accessibility, and education.'] },
+  { title: 'Lipid Bilayer Website', category: 'Science education', body: 'Built a biology website explaining lipid bilayers and cell membrane concepts with clear visuals for students.', linkUrl: cellMembraneRepoUrl, linkLabel: 'Repo', details: ['Cell membrane structure, phospholipids, membrane transport, diffusion, cell structure, and science communication.'] },
 ];
 
 const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedded Systems', 'Robotics', 'Motor Control', 'SwiftUI', 'Flutter', 'BLE', 'Networking', 'Compiler Design', 'Programming Language Design', 'Data Analytics', 'Mechatronics', 'Assistive Technology', 'Accessibility', 'Hackathons', 'Python', 'Pygame', 'STEM Education', 'Leadership', 'Public Speaking', 'Curriculum Design', 'Project Management'];
@@ -161,10 +155,11 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
         <p>Project photos and build notes are organized inside each project card.</p>
       </div>
       <div class="project-grid">
-        <article v-for="(project, index) in projects" :key="project.title" class="project-card" :class="{ large: index === 0 || index === 4 }">
+        <article v-for="(project, index) in projects" :key="project.title" class="project-card" :class="{ large: index === 0 || index === 3 }">
           <div class="project-topline">
             <span>{{ project.category }}</span>
-            <a v-if="project.repoUrl && project.repoUrl.startsWith('https')" :href="project.repoUrl" target="_blank" rel="noreferrer">Repo</a>
+            <a v-if="project.linkUrl" :href="project.linkUrl" target="_blank" rel="noreferrer">{{ project.linkLabel }}</a>
+            <span v-else-if="project.localLabel" class="local-label">{{ project.localLabel }}</span>
           </div>
           <h3>{{ project.title }}</h3>
           <p>{{ project.body }}</p>
@@ -190,7 +185,7 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
           <li>Guided students through wiring, debugging, and integrating physical electronics with software.</li>
           <li>Built outreach material and maintained the nonprofit website.</li>
         </ul>
-        <a class="text-link" :href="nonprofitRepoUrl" target="_blank" rel="noreferrer">View nonprofit repo</a>
+        <a class="text-link" :href="programmaticsWebsiteUrl" target="_blank" rel="noreferrer">View Programmatics website</a>
       </div>
       <div class="photo-wall"><figure v-for="photo in programmaticPhotos" :key="photo"><img :src="photo" alt="Programmatics class photo" /></figure></div>
     </section>
