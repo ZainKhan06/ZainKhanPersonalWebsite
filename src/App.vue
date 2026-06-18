@@ -40,6 +40,7 @@ const projects = [
     localLabel: 'Local build',
     details: ['Logic gates, ALU, CPU, registers, RAM, ROM, control unit, memory mapping, assembler, compiler, graphics output, and Tetris.', 'Jack compiler with tokenization, recursive descent parsing, symbol tables, VM writing, and folder or single-file compilation.'],
     images: [
+      { src: instructionSetSvg, alt: 'Nand2Tetris custom 16-bit computer instruction set reference', label: 'Instruction set reference' },
       { src: hardwareBoard, alt: 'Custom computer hardware wiring and board setup', label: 'Hardware build' },
       { src: isaNotes, alt: 'Handwritten instruction set and computer architecture notes', label: 'Architecture notes' },
       { src: logicAnalyzer, alt: 'Logic analyzer showing timing signals', label: 'Signal verification' },
@@ -145,7 +146,6 @@ const skills = ['Computer Architecture', 'Digital Logic', 'CPU Design', 'Embedde
         <p>A complete computer architecture project built from logic gates through CPU design, assembler, compiler, graphics, and Tetris.</p>
         <a class="text-link" href="#projects">Open full project notes</a>
       </div>
-      <div class="feature-board"><img :src="instructionSetSvg" alt="Hack instruction set diagram" /></div>
     </section>
 
     <section id="projects" class="projects">
